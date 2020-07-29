@@ -32,7 +32,7 @@ const createSiteMenuTemplate = () => {
             >STATISTICS</label
           >
         </section>`
-  )
+  );
 };
 
 const createSiteFilterTemplate = () => {
@@ -96,7 +96,7 @@ const createSiteFilterTemplate = () => {
       >Archive <span class="filter__archive-count">115</span></label
     >
   </section>`
-  )
+  );
 };
 
 const createSiteBoardTemplate = () => {
@@ -354,32 +354,32 @@ const createNewTaskTemplate = () => {
               </div>
             </div>
           </article>`
-  )
+  );
 };
 
 const createButtonLoadMore = () => {
   return (
     `<button class="load-more" type="button">load more</button>`
-  )
-}
-
-const mainContainer = document.querySelector('.main');
-const mainControl = mainContainer.querySelector('.main__control');
-
-const render = (container, template, place) => {
-  container.insertAdjacentHTML(place, template)
+  );
 };
 
-render(mainControl, createSiteMenuTemplate(), 'beforeend');
-render(mainControl, createSiteFilterTemplate(), 'afterend');
-render(mainContainer, createSiteBoardTemplate(), 'beforeend');
+const mainContainer = document.querySelector(`.main`);
+const mainControl = mainContainer.querySelector(`.main__control`);
 
-const board = mainContainer.querySelector('.board');
-const boardTasks = board.querySelector('.board__tasks');
+const render = (container, template, place) => {
+  container.insertAdjacentHTML(place, template);
+};
+
+render(mainControl, createSiteMenuTemplate(), `beforeend`);
+render(mainControl, createSiteFilterTemplate(), `afterend`);
+render(mainContainer, createSiteBoardTemplate(), `beforeend`);
+
+const board = mainContainer.querySelector(`.board`);
+const boardTasks = board.querySelector(`.board__tasks`);
 
 
 for (let i = 0; i < NEW_TASKS; i++) {
-  render(boardTasks, createNewTaskTemplate(), 'beforeend');
+  render(boardTasks, createNewTaskTemplate(), `beforeend`);
 }
 
-render(board, createButtonLoadMore(), 'beforeend')
+render(board, createButtonLoadMore(), `beforeend`);
