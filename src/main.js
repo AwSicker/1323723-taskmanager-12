@@ -307,7 +307,7 @@ const createSiteBoardTemplate = () => {
       </article>
     </div>
   </section>`
-  )
+  );
 };
 
 const createNewTaskTemplate = () => {
